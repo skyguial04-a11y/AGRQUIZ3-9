@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="member-list" lines="none">
+    @for (member of members; track member) {
+      <ion-item>
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label>{{ member }}</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <main class="login-card">
+    <div class="brand-mark" aria-hidden="true">
+      <ion-icon name="car-sport-outline"></ion-icon>
+    </div>
+    <p class="eyebrow">WELCOME TO</p>
+    <h1>Pink Suds<br />Car Wash</h1>
+    <p class="intro">A fresh, feel-good clean for every ride.</p>
+    <div class="login-fields">
+      <ion-item lines="none">
+        <ion-input
+          label="Username"
+          labelPlacement="stacked"
+          placeholder="Enter your username"
+          autocomplete="username"
+        ></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input
+          label="Password"
+          labelPlacement="stacked"
+          placeholder="Enter your password"
+          type="password"
+          autocomplete="current-password"
+        ></ion-input>
+      </ion-item>
+    </div>
+    <ion-button expand="block" shape="round" (click)="login()">
+      Login
+      <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+  </main>
+</ion-content>

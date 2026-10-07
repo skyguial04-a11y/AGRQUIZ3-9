@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/carwash/bookings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ booking ? 'Booking #' + booking.bookingId : 'Booking ID' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  @if (booking) {
+    <section class="booking-detail">
+      <div class="booking-icon" aria-hidden="true">
+        <ion-icon name="image-outline"></ion-icon>
+      </div>
+      <h1>Descriptions</h1>
+      <div class="detail-row">
+        <span>Booking ID</span>
+        <strong>{{ booking.bookingId }}</strong>
+      </div>
+      <div class="detail-row">
+        <span>Service name</span>
+        <strong>{{ booking.serviceName }}</strong>
+      </div>
+      <div class="detail-row">
+        <span>Date</span>
+        <strong>{{ booking.bookingDate | date:'EEEE, MMMM d, y' }}</strong>
+      </div>
+      <div class="detail-row">
+        <span>Status</span>
+        <ion-badge [class]="booking.bookingStatus.toLowerCase().replace(' ', '-')">
+          {{ booking.bookingStatus }}
+        </ion-badge>
+      </div>
+      @if (booking.bookingStatus !== 'Completed') {
+        <ion-button expand="block" (click)="completeBooking()">COMPLETE</ion-button>
+      } @else {
+        <ion-button expand="block" disabled>COMPLETED</ion-button>
+      }
+    </section>
+  } @else {
+    <section class="not-found">
+      <h1>Booking not found</h1>
+      <p>This booking may have been removed.</p>
+      <ion-button routerLink="/carwash/bookings" fill="outline">Back to Bookings</ion-button>
+    </section>
+  }
+</ion-content>

@@ -1,0 +1,74 @@
+ion-toolbar {
+  --background: #fff7fa;
+  --color: #482638;
+}
+
+.booking-detail {
+  margin: 20px 16px;
+  padding: 20px 18px;
+  border: 1px solid #f4dce6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(61 26 43 / 8%);
+}
+
+.booking-icon {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #fbe0ec;
+  color: var(--ion-color-primary);
+  font-size: 42px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  color: #3f2935;
+  font-size: 21px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #f1dce5;
+  color: #765e6a;
+  font-size: 14px;
+}
+
+.detail-row strong {
+  color: #3f2935;
+  text-align: right;
+}
+
+ion-badge {
+  padding: 7px 10px;
+  border-radius: 10px;
+}
+
+ion-badge {
+  --background: #fbe0ec;
+  --color: #8a1d55;
+}
+
+ion-button {
+  margin-top: 18px;
+}
+
+.not-found {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 24px;
+}
+
+.not-found p {
+  color: #785f6d;
+}

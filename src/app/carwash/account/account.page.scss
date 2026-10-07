@@ -1,0 +1,30 @@
+ion-content {
+  --background: #fff0f6;
+}
+
+.member-list {
+  margin: 18px 16px;
+  padding: 0 10px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(61 26 43 / 8%);
+}
+
+ion-item {
+  --background: #fff;
+  --color: #3f2935;
+  --min-height: 58px;
+}
+
+ion-item + ion-item {
+  --border-color: #f5e7ed;
+}
+
+ion-item ion-icon {
+  color: var(--ion-color-primary);
+  font-size: 25px;
+}
+
+ion-label {
+  font-weight: 600;
+}

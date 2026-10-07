@@ -1,0 +1,66 @@
+.service-art {
+  height: 240px;
+  display: grid;
+  place-items: center;
+  margin: 16px;
+  border-radius: 12px;
+  background: #fbe0ec;
+  color: var(--ion-color-primary);
+  font-size: 92px;
+}
+
+.details {
+  margin: 16px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(61 26 43 / 8%);
+}
+
+h1 {
+  margin: 0 0 14px;
+  color: #3f2935;
+  font-size: 21px;
+}
+
+.description {
+  margin: 0 0 16px;
+  color: #765e6a;
+  line-height: 1.5;
+}
+
+.detail-value {
+  margin: 10px 0;
+  color: #765e6a;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid #f1dce5;
+  color: #765e6a;
+}
+
+.price-row strong {
+  color: var(--ion-color-primary);
+  font-size: 20px;
+}
+
+ion-button {
+  margin-top: 12px;
+}
+
+.not-found {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 24px;
+}
+
+.not-found p {
+  color: #785f6d;
+}

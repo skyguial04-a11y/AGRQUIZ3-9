@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/carwash/services"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ service?.serviceName ?? 'Service Overview' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  @if (service) {
+    <div class="service-art" aria-hidden="true">
+      <ion-icon name="image-outline"></ion-icon>
+    </div>
+    <section class="details">
+      <h1>Descriptions</h1>
+      <p class="description">{{ service.serviceDescription }}</p>
+      <p class="detail-value"><strong>Type:</strong> {{ service.serviceType }}</p>
+      <p class="detail-value"><strong>Vehicle type:</strong> {{ service.vehicleType }}</p>
+      <div class="price-row">
+        <span>Service price</span>
+        <strong>₱{{ service.servicePrice | number:'1.0-0' }}</strong>
+      </div>
+      <ion-button expand="block" (click)="bookService()">BOOK</ion-button>
+    </section>
+  } @else {
+    <section class="not-found">
+      <h1>Service not found</h1>
+      <p>This service may have been removed.</p>
+      <ion-button routerLink="/carwash/services" fill="outline">Back to Services</ion-button>
+    </section>
+  }
+</ion-content>

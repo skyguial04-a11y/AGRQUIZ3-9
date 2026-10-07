@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Bookings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-datetime
+    class="booking-calendar"
+    presentation="date"
+    [value]="calendarValue"
+    [highlightedDates]="highlightedDates"
+    aria-label="October 2026 booking calendar"
+  ></ion-datetime>
+  <h1 class="page-title">MY BOOKING</h1>
+
+  <ion-list class="booking-list" lines="none">
+    @for (booking of bookings; track booking.bookingId) {
+      <ion-item
+        [routerLink]="['/carwash/bookings', booking.bookingId]"
+        detail="false"
+        class="booking-item"
+      >
+        <div class="booking-date" slot="start">
+          <span>{{ booking.bookingDate | date:'MMM' }}</span>
+          <strong>{{ booking.bookingDate | date:'d' }}</strong>
+        </div>
+        <ion-label>
+          <h2>{{ booking.serviceName }}</h2>
+          <p>{{ booking.bookingDate | date:'EEEE, MMMM d, y' }}</p>
+        </ion-label>
+        <ion-badge [class]="booking.bookingStatus.toLowerCase().replace(' ', '-')">
+          {{ booking.bookingStatus }}
+        </ion-badge>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>
